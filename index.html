@@ -1,7 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #8E4536;
+            font-family: 'Trebuchet MS', sans-serif;
+            color: #ECDFC3;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h1, nav a {
+            font-size: 15px;
+            margin: 0; /* Remove default margin */
+        }
+
+        nav a {
+            color: #ECDFC3;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: background-color 0.3s, text-decoration 0.3s;
+            padding: 5px 10px; /* Padding added for better spacing */
+        }
+
+        nav a:hover {
+            background-color: #6A3328;
+            padding: 10px 14px; /* Adjusted padding for 14 by 20 pixels box */
+        }
+
+        .underline {
+            text-decoration: underline;
+            color: #6A3328; /* Set text color for underlined text */
+        }
+
+        .content-box {
+            background-color: #ECDFC3;
+            border-top: 4px solid #6A3328; /* Top border: 4px thick */
+            border-right: 2px solid #6A3328; /* Right border: 2px thick */
+            border-bottom: 1px solid #6A3328; /* Bottom border: 1px thick */
+            border-left: 2px solid #6A3328; /* Left border: 2px thick */
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            overflow: hidden; /* Clear float */
+            display: flex; /* Use flexbox to control image and text alignment */
+        }
+
+        .content-box img {
+            border-radius: 8px; /* Rounded corners for the image */
+            max-width: 33%; /* Set maximum width to one-third */
+            margin-right: 20px;
+        }
+
+        .content-box p {
+            text-align: justify;
+            flex-grow: 1; /* Allow the text to take up the remaining space */
+            color: #6A3328; /* Set text color to #6A3328 */
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <header>
+        <div>
+            <h1>mollydrumm.com</h1>
+        </div>
+        <nav>
+            <span class="underline">home</span>
+            <a href="http://mollydrumm.com/projects" target="_blank">projects</a>
+            <a href="#">resume</a>
+        </nav>
+    </header>
+
+    <div class="content-box">
+        <img src="your-image-url.jpg" alt="Image Description" width="100">
+        <p>
+            Your text content goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Duis dapibus, justo nec elementum fermentum, justo turpis iaculis dolor, sit amet
+            facilisis metus elit ac orci.
+        </p>
+    </div>
+
+    <!-- The rest of your website content goes here -->
+
 </body>
 </html>
