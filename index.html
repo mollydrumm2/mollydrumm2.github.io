@@ -62,17 +62,16 @@
 
         .content-box {
             background-color: #ECDFC3;
-            border-top: 4px solid #6A3328; /* Top border: 4px thick */
-            border-right: 4px solid #6A3328; /* Right border: 2px thick */
-            border-bottom: 4px solid #6A3328; /* Bottom border: 1px thick */
-            border-left: 4px solid #6A3328; /* Left border: 2px thick */
+            border-top: 7px solid #6A3328; /* Top border: 4px thick */
+            border-right: 7px solid #6A3328; /* Right border: 2px thick */
+            border-bottom: 7px solid #6A3328; /* Bottom border: 1px thick */
+            border-left: 7px solid #6A3328; /* Left border: 2px thick */
             border-radius: 10px;
             padding: 20px;
             margin: 20px auto; /* Center the box horizontally, with 20px margin on top and bottom */
             width: 66.666%; /* Set the width to take up two-thirds of the page */
             overflow: hidden; /* Clear float */
             display: flex; /* Use flexbox to control image and text alignment */
-            flex-direction: column; /* Align content in a column layout */
         }
 
         .content-box img {
@@ -88,9 +87,13 @@
             margin-bottom: 15px; /* Add margin between header and text */
         }
 
+        .content-box-text {
+            display: flex;
+            flex-direction: column; /* Align content in a column layout */
+        }
+
         .content-box p {
             text-align: justify;
-            flex-grow: 1; /* Allow the text to take up the remaining space */
             color: #6A3328; /* Set text color to #6A3328 */
         }
     </style>
@@ -109,12 +112,14 @@
     </header>
 
     <div class="content-box">
-        <h2 class="content-header">Molly Drumm</h2>
         <img src="headshot2.png" alt="Image Description" width="100">
-        <p>
-            hi, my name is Molly and this is a page for all my projects! Please enjoy this goofy photo of me :) that's all we got so far 
-            ... website very much still in progress... 
-        </p>
+        <div class="content-box-text">
+            <h2 class="content-header">Molly Drumm</h2>
+            <p>
+                hi, my name is Molly and this is a page for all my projects! Please enjoy this goofy photo of me :) that's all we got so far 
+                ... website very much still in progress... 
+            </p>
+        </div>
     </div>
 
     <!-- The rest of your website content goes here -->
