@@ -35,7 +35,7 @@
             color: #ECDFC3;
             text-decoration: none;
             margin: 0 10px;
-            transition: color 0.3s; /* Add transition for color change */
+            transition: background-color 0.3s, color 0.3s; /* Add transition for color change */
             padding: 5px 10px; /* Padding added for better spacing */
         }
 
@@ -88,6 +88,8 @@
 
         .content-box-text {
             flex-grow: 1; /* Allow the text to take up the remaining space */
+            display: flex;
+            flex-direction: column; /* Align content in a column layout */
         }
 
         .content-header {
@@ -119,7 +121,7 @@
     <div class="content-box">
         <img src="headshot2.png" alt="Image Description" width="100">
         <div class="content-box-text">
-            <h2 class="content-header">Molly Drumm</h2>
+            <h2 class="content-header">molly drumm</h2>
             <p>
                 hi, my name is Molly and this is a page for all my projects! Please enjoy this goofy photo of me :) that's all we got so far 
                 ... website very much still in progress... 
