@@ -9,7 +9,6 @@
 
     <link rel="icon" type="image/png" href="pixilart-drawing (3).png">
 
-    
     <style>
         body {
             margin: 0; 
@@ -99,6 +98,49 @@
             font-size: 20px; /* Set font size for the paragraph text */
             color: #6A3328; /* Set text color to #6A3328 */
         }
+
+        /* Second Content Box */
+        .content-box-2 {
+            background-color: #ECDFC3;
+            border-top: 7px solid #6A3328; /* Top border: 4px thick */
+            border-right: 7px solid #6A3328; /* Right border: 2px thick */
+            border-bottom: 7px solid #6A3328; /* Bottom border: 1px thick */
+            border-left: 7px solid #6A3328; /* Left border: 2px thick */
+            border-radius: 30px;
+            padding: 20px;
+            margin: 20px auto; /* Center the box horizontally, with 20px margin on top and bottom */
+            width: 66.666%; /* Set the width to take up two-thirds of the page */
+            overflow: hidden; /* Clear float */
+            display: flex; /* Use flexbox to control image and text alignment */
+            flex-direction: row-reverse; /* Reverse the flex direction to put the image on the right */
+            align-items: center; /* Center items vertically */
+            justify-content: space-between; /* Space between header and text */
+            transition: transform 0.3s; /* Add transition for scaling */
+        }
+
+        .content-box-2:hover {
+            transform: scale(1.1); /* Grow the box on hover */
+        }
+
+        .content-box-2 img {
+            border-radius: 30px; /* Rounded corners for the image */
+            width: 200px; /* Set image width to 200 pixels (2/3 of the first image) */
+            margin-left: 20px;
+        }
+
+        .content-box-2-text {
+            flex-grow: 1; /* Allow the text to take up the remaining space */
+            display: flex;
+            flex-direction: column; /* Align content in a column layout */
+            margin-right: 40px;
+            margin-left: 40px;
+        }
+
+        .content-box-2 p {
+            text-align: justify;
+            font-size: 20px; /* Set font size for the paragraph text */
+            color: #6A3328; /* Set text color to #6A3328 */
+        }
     </style>
 </head>
 <body>
@@ -114,8 +156,9 @@
         </nav>
     </header>
 
+    <!-- First Content Box -->
     <div class="content-box">
-        <img src="headshot2.png" alt="Image Description" width="100">
+        <img src="headshot2.png" alt="Image Description" width="300">
         <div class="content-box-text">
             <p>
                 hi, my name is Molly and this is a page for all my projects! Please enjoy this goofy photo of me :) that's all we got so far 
@@ -124,7 +167,19 @@
         </div>
     </div>
 
-    <!-- The rest of your website content goes here -->
+    <!-- Second Content Box -->
+    <a href="http://mollydrumm.com/projects/knitting">
+        <div class="content-box-2">
+            <div class="content-box-2-text">
+                <p>
+                    Second Content Box: Text on the left, Image on the right
+                </p>
+            </div>
+            <img src="your-second-image.png" alt="Image Description" width="200">
+        </div>
+    </a>
 
+
+    <!-- The rest of your website content goes here -->
 </body>
 </html>
