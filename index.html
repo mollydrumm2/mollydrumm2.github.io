@@ -123,6 +123,10 @@
             transform: scale(1.1); /* Grow the box on hover */
         }
 
+        .content-box-2 a {
+            text-decoration: none; /* Remove underline for links in content boxes */
+        }
+
         .content-box-2 img {
             border-radius: 30px; /* Rounded corners for the image */
             width: 200px; /* Set image width to 200 pixels (2/3 of the first image) */
@@ -169,17 +173,14 @@
     </div>
 
     <!-- Second Content Box -->
-    <a href="http://mollydrumm.com/knitting">
-        <div class="content-box-2">
-            <div class="content-box-2-text">
-                <p>
-                    Second Content Box: Text on the left, Image on the right
-                </p>
-            </div>
-            <img src="your-second-image.png" alt="Image Description" width="200">
+    <a href="http://mollydrumm.com/knitting" class="content-box-2">
+        <div class="content-box-2-text">
+            <p>
+                Second Content Box: Text on the left, Image on the right
+            </p>
         </div>
+        <img src="your-second-image.png" alt="Image Description" width="200">
     </a>
-
 
     <!-- The rest of your website content goes here -->
 </body>
