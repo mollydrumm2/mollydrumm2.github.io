@@ -64,10 +64,10 @@
 
         .content-box {
             background-color: #ECDFC3;
-            border-top: 7px solid #6A3328; /* Top border: 4px thick */
-            border-right: 7px solid #6A3328; /* Right border: 2px thick */
-            border-bottom: 7px solid #6A3328; /* Bottom border: 1px thick */
-            border-left: 7px solid #6A3328; /* Left border: 2px thick */
+            border-top: 12px double #6A3328; /* Top border: 4px thick */
+            border-right: 12px double #6A3328; /* Right border: 2px thick */
+            border-bottom: 12px double #6A3328; /* Bottom border: 1px thick */
+            border-left: 12px double #6A3328; /* Left border: 2px thick */
             border-radius: 30px;
             padding: 20px;
             margin: 20px auto; /* Center the box horizontally, with 20px margin on top and bottom */
@@ -101,18 +101,18 @@
 
         /* Second Content Box */
         .content-box-2 {
-            background-color: #ECDFC3;
-            border-top: 7px solid #6A3328; /* Top border: 4px thick */
-            border-right: 7px solid #6A3328; /* Right border: 2px thick */
-            border-bottom: 7px solid #6A3328; /* Bottom border: 1px thick */
-            border-left: 7px solid #6A3328; /* Left border: 2px thick */
+            background-color: #E0BE8B;
+            border-top: 4px solid #6A3328; /* Top border: 4px thick */
+            border-right: 4px solid #6A3328; /* Right border: 2px thick */
+            border-bottom: 4px solid #6A3328; /* Bottom border: 1px thick */
+            border-left: 4px solid #6A3328; /* Left border: 2px thick */
             border-radius: 30px;
             padding: 20px;
             margin: 20px auto; /* Center the box horizontally, with 20px margin on top and bottom */
             width: 66.666%; /* Set the width to take up two-thirds of the page */
             overflow: hidden; /* Clear float */
             display: flex; /* Use flexbox to control image and text alignment */
-            flex-direction: row-reverse; /* Reverse the flex direction to put the image on the right */
+            flex-direction: row-reverse; /* Set flex direction to row */
             align-items: center; /* Center items vertically */
             justify-content: space-between; /* Space between header and text */
             transition: transform 0.3s; /* Add transition for scaling */
@@ -121,10 +121,6 @@
 
         .content-box-2:hover {
             transform: scale(1.1); /* Grow the box on hover */
-        }
-
-        .content-box-2 a {
-            text-decoration: none; /* Remove underline for links in content boxes */
         }
 
         .content-box-2 img {
@@ -174,12 +170,12 @@
 
     <!-- Second Content Box -->
     <a href="http://mollydrumm.com/knitting" class="content-box-2">
+        <img src="IMG_0500.jpg" alt="knitting image" width="200">
         <div class="content-box-2-text">
             <p>
-                Second Content Box: Text on the left, Image on the right
+                my knitting projects!
             </p>
         </div>
-        <img src="IMG_0500.jpg" alt="knitting image" width="200">
     </a>
 
     <!-- The rest of your website content goes here -->
