@@ -35,12 +35,13 @@
             color: #ECDFC3;
             text-decoration: none;
             margin: 0 10px;
-            transition: background-color 0.3s, text-decoration 0.3s;
+            transition: color 0.3s; /* Add transition for color change */
             padding: 5px 10px; /* Padding added for better spacing */
         }
 
         nav a:hover {
             background-color: #6A3328;
+            color: #ECDFC3; /* Set text color on hover */
             padding: 10px 14px; /* Adjusted padding for 14 by 20 pixels box */
         }
 
@@ -76,6 +77,7 @@
             display: flex; /* Use flexbox to control image and text alignment */
             flex-direction: row; /* Set flex direction to row */
             align-items: center; /* Center items vertically */
+            justify-content: space-between; /* Space between header and text */
         }
 
         .content-box img {
