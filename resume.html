@@ -1,0 +1,129 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projects</title>
+
+    <!-- Just wanna say somewhere that chat gpt wrote basically all of this lol I don't know html -->
+
+    <link rel="icon" type="image/png" href="pixilart-drawing (3).png">
+
+    
+    <style>
+        body {
+            margin: 0; 
+            padding: 0;
+            background-color: #8E4536;
+            font-family: 'Trebuchet MS', sans-serif;
+            color: #ECDFC3;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h1, nav a {
+            font-size: 30px;
+            margin: 0; /* Remove default margin */
+        }
+
+        nav a {
+            color: #ECDFC3;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: background-color 0.3s, color 0.3s; /* Add transition for color change */
+            padding: 10px 14px; /* Padding added for better spacing */
+        }
+
+        nav a:hover {
+            background-color: #6A3328;
+            color: #ECDFC3; /* Set text color on hover */
+            padding: 10px 14px; /* Adjusted padding for 14 by 20 pixels box */
+        }
+
+        .underline {
+            text-decoration: none;
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 30px;
+            color: #ECDFC3; /* Set text color for underlined text */
+            background-color: #6A3328;
+            padding: 10px 14px; /* Adjusted padding for 14 by 20 pixels box */
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center; /* Center items vertically */
+        }
+
+        .header-content h1 {
+            margin-right: 10px; /* Add margin between h1 and img */
+        }
+
+        .content-box {
+            background-color: #ECDFC3;
+            border-top: 7px solid #6A3328; /* Top border: 4px thick */
+            border-right: 7px solid #6A3328; /* Right border: 2px thick */
+            border-bottom: 7px solid #6A3328; /* Bottom border: 1px thick */
+            border-left: 7px solid #6A3328; /* Left border: 2px thick */
+            border-radius: 30px;
+            padding: 20px;
+            margin: 20px auto; /* Center the box horizontally, with 20px margin on top and bottom */
+            width: 66.666%; /* Set the width to take up two-thirds of the page */
+            overflow: hidden; /* Clear float */
+            display: flex; /* Use flexbox to control image and text alignment */
+            flex-direction: row; /* Set flex direction to row */
+            align-items: center; /* Center items vertically */
+            justify-content: space-between; /* Space between header and text */
+        }
+
+        .content-box img {
+            border-radius: 30px; /* Rounded corners for the image */
+            width: 300px; /* Set image width to 300 pixels */
+            margin-right: 20px;
+        }
+
+        .content-box-text {
+            flex-grow: 1; /* Allow the text to take up the remaining space */
+            display: flex;
+            flex-direction: column; /* Align content in a column layout */
+            margin-right: 40px;
+            margin-left: 40px;
+        }
+
+        .content-box p {
+            text-align: justify;
+            font-size: 20px; /* Set font size for the paragraph text */
+            color: #6A3328; /* Set text color to #6A3328 */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>mollydrumm.com</h1>
+            <img src="pixil-frame-0.png" alt="Image Description" width="32">
+        </div>
+        <nav>
+            <a href="http://mollydrumm.com">home</a>
+            <a href="http://mollydrumm.com/projects">projects</a>
+            <span class="underline">resume</span>
+        </nav>
+    </header>
+
+    <div class="content-box">
+        <img src="headshot2.png" alt="Image Description" width="100">
+        <div class="content-box-text">
+            <p>
+                project yes 
+            </p>
+        </div>
+    </div>
+
+    <!-- The rest of your website content goes here -->
+
+</body>
+</html>
