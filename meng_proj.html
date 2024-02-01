@@ -76,35 +76,32 @@
             width: 66.666%; /* Set the width to take up two-thirds of the page */
             overflow: hidden; /* Clear float */
             display: flex; /* Use flexbox to control image and text alignment */
-            flex-direction: row; /* Set flex direction to row */
-            align-items: center; /* Center items vertically */
+            flex-direction: column; /* Set flex direction to column */
+            align-items: center; /* Center items horizontally */
             justify-content: space-between; /* Space between header and text */
         }
 
-        .content-box img {
-            border-radius: 30px; /* Rounded corners for the image */
-            width: 300px; /* Set image width to 300 pixels */
-            margin-right: 20px;
+        .arrow-container {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .arrow-container img {
+            margin: 0 20px;
         }
 
         .content-box-text {
-            flex-grow: 1; /* Allow the text to take up the remaining space */
-            display: flex;
-            flex-direction: column; /* Align content in a column layout */
-            margin-right: 40px;
-            margin-left: 40px;
+            text-align: justify;
+            font-size: 20px; /* Set font size for the paragraph text */
+            color: #6A3328; /* Set text color to #6A3328 */
+            margin-top: 10px;
         }
 
         .content-box h2 {
             font-size: 24px;
             color: #6A3328;
             margin-bottom: 10px;
-        }
-
-        .content-box p {
-            text-align: justify;
-            font-size: 20px; /* Set font size for the paragraph text */
-            color: #6A3328; /* Set text color to #6A3328 */
         }
 
         /* Text in the top middle of the page */
@@ -143,12 +140,15 @@
     </div>
 
     <div class="content-box">
-        <img src="IMG.jpg" alt="meng proj image" width="100">
+        <h2>using fourier series to smooth a vtk model of a chick heart in time</h2>
+        <div class="arrow-container">
+            <img src="IMG1.jpg" alt="Image 1" width="100">
+            <img src="arrow-right.png" alt="Arrow Right" width="50">
+            <img src="smoothed_front_REAL.gif" alt="Image 2" width="100">
+        </div>
         <div class="content-box-text">
-            <h2>using fourier series to smooth a vtk model of a chick heart in time</h2>
             <p>
                 For this project I aided in smoothing ultrasound data from a PhD student's research. The motivation for this project is that heart defects in newborns develop in embryonic stages. If the development of the heart in these stages can be studied using CFD and muscle strains simulations, more can be learned about these defects. This can be done by creating a 3D model of the developing heart beating to run the simulations with. Chick hearts are used because they develop somewhat like human hearts and you can see into the eggs to image them easily. Stacked ultrasounds are used to make a 3D model, and they are made at different time points over the period which the heart beats. This data creates a model with a lot of high frequency noise in the movement over time, and some artifacts of the discrete data in space. The data is smoothed over time using a Fourier transform, which approximates a function using superposition of sine and cos waves. Then, the high noise frequencies are removed from the function. I did this using Matlab Fast Fourier Transform (fft). Finally, the smoothed version is converted back to the original vtk file format using a Fortran file my advisor Professor Esmaily wrote for me. My project this semester will be smoothing the model in space using spherical harmonics. This smoothed model can be used in simulations for more accurate results. Thanks to Gening Dong the PhD student I worked with for providing the data and Professor Esmaily for recommending the use of Matlab fft and helping with the code.  
-
             </p>
         </div>
     </div>
