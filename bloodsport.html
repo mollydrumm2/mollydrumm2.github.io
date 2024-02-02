@@ -1,0 +1,170 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projects</title>
+
+    <!-- Just wanna say somewhere that chat gpt wrote basically all of this lol I don't know html -->
+
+    <link rel="icon" type="image/png" href="pixilart-drawing (3).png">
+
+    
+    <style>
+        body {
+            margin: 0; 
+            padding: 0;
+            background-color: #8E4536;
+            font-family: 'Trebuchet MS', sans-serif;
+            color: #ECDFC3;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            margin-right: 5px;
+        }
+
+        h1, nav a {
+            font-size: 30px;
+            margin: 0; /* Remove default margin */
+        }
+
+        nav a {
+            color: #ECDFC3;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: background-color 0.3s, color 0.3s; /* Add transition for color change */
+            padding: 10px 14px; /* Padding added for better spacing */
+        }
+
+        nav a:hover {
+            background-color: #6A3328;
+            color: #ECDFC3; /* Set text color on hover */
+            padding: 10px 14px; /* Adjusted padding for 14 by 20 pixels box */
+        }
+
+        .underline {
+            text-decoration: none;
+            font-family: 'Trebuchet MS', sans-serif;
+            font-size: 30px;
+            color: #ECDFC3; /* Set text color for underlined text */
+            background-color: #6A3328;
+            padding: 10px 14px; /* Adjusted padding for 14 by 20 pixels box */
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center; /* Center items vertically */
+        }
+
+        .header-content h1 {
+            margin-right: 10px; /* Add margin between h1 and img */
+        }
+
+        .content-box {
+            background-color: #ECDFC3;
+            border-top: 7px solid #6A3328; /* Top border: 4px thick */
+            border-right: 7px solid #6A3328; /* Right border: 2px thick */
+            border-bottom: 7px solid #6A3328; /* Bottom border: 1px thick */
+            border-left: 7px solid #6A3328; /* Left border: 2px thick */
+            border-radius: 30px;
+            padding: 20px;
+            margin: 20px auto; /* Center the box horizontally, with 20px margin on top and bottom */
+            width: 66.666%; /* Set the width to take up two-thirds of the page */
+            overflow: hidden; /* Clear float */
+            display: flex; /* Use flexbox to control image and text alignment */
+            flex-direction: column; /* Set flex direction to column */
+            align-items: center; /* Center items horizontally */
+            justify-content: space-between; /* Space between header and text */
+        }
+
+        .arrow-container {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .arrow-container img {
+            margin: 0 20px;
+        }
+
+        .content-box-text {
+            text-align: justify;
+            font-size: 20px; /* Set font size for the paragraph text */
+            color: #6A3328; /* Set text color to #6A3328 */
+            margin-top: 10px;
+        }
+
+        .content-box h2 {
+            font-size: 24px;
+            color: #6A3328;
+            margin-bottom: 10px;
+        }
+
+        .content-box-text p {
+            text-align: justify;
+            font-size: 20px;
+            color: #6A3328;
+            /* Add an indent of 20 pixels */
+            text-indent: 20px;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+
+        /* Text in the top middle of the page */
+        .top-text {
+            text-align: center;
+            font-size: 40px;
+            color: #ECDFC3;
+            margin-top: 20px;
+            text-decoration: underline double 1px;
+            text-underline-offset: 10px;
+        }
+
+        /* Style for the link in the content-box-text */
+        .content-box-text a {
+            color: #6A3328;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>mollydrumm.com</h1>
+            <img src="pixil-frame-0.png" alt="Image Description" width="32">
+        </div>
+        <nav>
+            <a href="http://mollydrumm.com">home</a>
+            <a href="http://mollydrumm.com/projects">projects</a>
+            <a href="http://mollydrumm.com/resume">resume</a>
+        </nav>
+    </header>
+
+    <!-- Text in the top middle of the page -->
+    <div class="top-text">
+        bloodsport battlebots CFD sim
+    </div>
+
+    <div class="content-box">
+        <div class="arrow-container">
+            <img src="IMG.png" alt="Image 1" width="350">
+            <img src="arrow-right.png" alt="Arrow Right" width="50">
+            <img src="IMG.png" alt="Image 2" width="350">
+        </div>
+        <div class="content-box-text">
+            <p>
+                The Battlebots team Bloodsport reach out to me and asked for ways to reduce the aerodynamic loading on their weapon motor when their weapon blade was spinning. I ran a CFD sim on the original set up and found that the loading from the drag was a very similar number to the loading reported by the team's data. I then put a chamfer on the sides of the blades and ran the sim again and this was able to reduce the loading by about half with a solution that should be easy to manufacture. 
+            </p>
+        </div>
+    </div>
+    
+    <!-- Add more content boxes here -->
+
+    <!-- The rest of your website content goes here -->
+
+</body>
+</html>
