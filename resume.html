@@ -64,7 +64,6 @@
         }
 
         .content-box {
-            background-image: url('resume_image.png');
             background-color: #ECDFC3;
             border-top: 7px solid #6A3328; /* Top border: 4px thick */
             border-right: 7px solid #6A3328; /* Right border: 2px thick */
@@ -100,6 +99,11 @@
             font-size: 20px; /* Set font size for the paragraph text */
             color: #6A3328; /* Set text color to #6A3328 */
         }
+
+        .content-box img {
+            width: 100%; /* Set image width to 100% of its container */
+            border-radius: 10px; /* Add border-radius to the image */
+        }
     </style>
 </head>
 <body>
@@ -116,7 +120,7 @@
     </header>
 
     <div class="content-box">
-
+        <img src="resume_image.png" alt="resume image">
     </div>
 
     <!-- The rest of your website content goes here -->
