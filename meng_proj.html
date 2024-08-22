@@ -5,11 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>projects</title>
 
-    <!-- Just wanna say somewhere that chat gpt wrote basically all of this lol I don't know html -->
-
     <link rel="icon" type="image/png" href="pixilart-drawing (3).png">
 
-    
     <style>
         body {
             margin: 0; 
@@ -29,72 +26,58 @@
 
         h1, nav a {
             font-size: 30px;
-            margin: 0; /* Remove default margin */
+            margin: 0;
         }
 
         nav a {
             color: #ECDFC3;
             text-decoration: none;
             margin: 0 10px;
-            transition: background-color 0.3s, color 0.3s; /* Add transition for color change */
-            padding: 10px 14px; /* Padding added for better spacing */
+            transition: background-color 0.3s, color 0.3s;
+            padding: 10px 14px;
         }
 
         nav a:hover {
             background-color: #6A3328;
-            color: #ECDFC3; /* Set text color on hover */
-            padding: 10px 14px; /* Adjusted padding for 14 by 20 pixels box */
+            color: #ECDFC3;
         }
 
         .underline {
             text-decoration: none;
             font-family: 'Trebuchet MS', sans-serif;
             font-size: 30px;
-            color: #ECDFC3; /* Set text color for underlined text */
+            color: #ECDFC3;
             background-color: #6A3328;
-            padding: 10px 14px; /* Adjusted padding for 14 by 20 pixels box */
+            padding: 10px 14px;
         }
 
         .header-content {
             display: flex;
-            align-items: center; /* Center items vertically */
+            align-items: center;
         }
 
         .header-content h1 {
-            margin-right: 10px; /* Add margin between h1 and img */
+            margin-right: 10px;
         }
 
         .content-box {
             background-color: #ECDFC3;
-            border-top: 7px solid #6A3328; /* Top border: 4px thick */
-            border-right: 7px solid #6A3328; /* Right border: 2px thick */
-            border-bottom: 7px solid #6A3328; /* Bottom border: 1px thick */
-            border-left: 7px solid #6A3328; /* Left border: 2px thick */
+            border: 7px solid #6A3328;
             border-radius: 30px;
             padding: 20px;
-            margin: 20px auto; /* Center the box horizontally, with 20px margin on top and bottom */
-            width: 66.666%; /* Set the width to take up two-thirds of the page */
-            overflow: hidden; /* Clear float */
-            display: flex; /* Use flexbox to control image and text alignment */
-            flex-direction: column; /* Set flex direction to column */
-            align-items: center; /* Center items horizontally */
-            justify-content: space-between; /* Space between header and text */
-        }
-
-        .arrow-container {
+            margin: 20px auto;
+            width: 66.666%;
+            overflow: hidden;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            margin-top: 10px;
-        }
-
-        .arrow-container img {
-            margin: 0 20px;
+            justify-content: space-between;
         }
 
         .content-box-text {
             text-align: justify;
-            font-size: 20px; /* Set font size for the paragraph text */
-            color: #6A3328; /* Set text color to #6A3328 */
+            font-size: 20px;
+            color: #6A3328;
             margin-top: 10px;
         }
 
@@ -105,16 +88,11 @@
         }
 
         .content-box-text p {
-            text-align: justify;
-            font-size: 20px;
-            color: #6A3328;
-            /* Add an indent of 20 pixels */
             text-indent: 20px;
             margin-right: 20px;
             margin-left: 20px;
         }
 
-        /* Text in the top middle of the page */
         .top-text {
             text-align: center;
             font-size: 40px;
@@ -124,7 +102,6 @@
             text-underline-offset: 10px;
         }
 
-        /* Style for the link in the content-box-text */
         .content-box-text a {
             color: #6A3328;
             text-decoration: underline;
@@ -144,45 +121,25 @@
         </nav>
     </header>
 
-    <!-- Text in the top middle of the page -->
     <div class="top-text">
-        Master of Engineering Project: \n
-        Smoothing a Beating Heart Model in Time and Space
+        Master of Engineering Project
     </div>
 
     <div class="content-box">
-        <h2> Spring Semester: Smoothing in Space with Spherical Harmonics</h2>
-        <div class="arrow-container">
-            <img src="noisy_front.gif" alt="Image 1" width="350">
-            <img src="arrow-right.png" alt="Arrow Right" width="50">
-            <img src="smoothed_front_REAL.gif" alt="Image 2" width="350">
+        <h2>Using Fourier Series and Spherical Harmonics to Smooth a Beating Heart Model in Time and Space</h2>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/l4rvc1FyW7g?autoplay=1&mute=1" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
         <div class="content-box-text">
             <p>
-                 explanation, thanks 
+                 For this project I aided in smoothing ultrasound data from a PhD student's research. The motivation for this project is that heart defects in newborns develop in embryonic stages. If the development of the heart in these stages can be studied using CFD and muscle strains simulations, more can be learned about these defects. This can be done by creating a 3D model of the developing heart beating to run the simulations with. Chick hearts are used because they develop somewhat like human hearts and you can see into the eggs to image them easily. Stacked ultrasounds are used to make a 3D model, and they are made at different time points over the period which the heart beats. This data creates a model with a lot of high frequency noise in the movement over time, and some artifacts of the discrete data in space. The data is smoothed over time using a Fourier transform, which approximates a function using superposition of sine and cos waves. Then, the high noise frequencies are removed from the function. I did this using Matlab Fast Fourier Transform (fft). Finally, the smoothed version is converted back to the original vtk file format using a Fortran file my advisor Professor Esmaily wrote for me. This smoothed model can be used in simulations for more accurate results. Thanks to Gening Dong the PhD student I worked with for providing the data and Professor Esmaily for recommending the use of Matlab fft and helping with the code. 
             </p>
         </div>
     </div>
 
-    <div class="content-box">
-        <h2> Fall Semester: Smoothing in Time with Fourier Series</h2>
-        <div class="arrow-container">
-            <img src="noisy_front.gif" alt="Image 1" width="350">
-            <img src="arrow-right.png" alt="Arrow Right" width="50">
-            <img src="smoothed_front_REAL.gif" alt="Image 2" width="350">
-        </div>
-        <div class="content-box-text">
-            <p>
-                For this project I aided in smoothing ultrasound data from a PhD student's research. The motivation for this project is that heart defects in newborns develop in embryonic stages. If the development of the heart in these stages can be studied using CFD and muscle strains simulations, more can be learned about these defects. This can be done by creating a 3D model of the developing heart beating to run the simulations with. Chick hearts are used because they develop somewhat like human hearts and you can see into the eggs to image them easily. Stacked ultrasounds are used to make a 3D model, and they are made at different time points over the period which the heart beats. This data creates a model with a lot of high frequency noise in the movement over time, and some artifacts of the discrete data in space. The data is smoothed over time using a Fourier transform, which approximates a function using superposition of sine and cos waves. Then, the high noise frequencies are removed from the function. I did this using Matlab Fast Fourier Transform (fft). Finally, the smoothed version is converted back to the original vtk file format using a Fortran file my advisor Professor Esmaily wrote for me. This smoothed model can be used in simulations for more accurate results. Thanks to Gening Dong the PhD student I worked with for providing the data and Professor Esmaily for recommending the use of Matlab fft and helping with the code.  
-            </p>
-        </div>
-    </div>
-
-
-    
     <!-- Add more content boxes here -->
-
-    <!-- The rest of your website content goes here -->
 
 </body>
 </html>
