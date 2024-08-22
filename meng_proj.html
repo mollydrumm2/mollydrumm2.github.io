@@ -87,6 +87,12 @@
             margin-bottom: 10px;
         }
 
+        .content-box h3 {
+            font-size: 22px;
+            color: #6A3328;
+            margin-top: 40px;
+        }
+
         .content-box-text p {
             text-indent: 20px;
             margin-right: 20px;
@@ -105,6 +111,12 @@
         .content-box-text a {
             color: #6A3328;
             text-decoration: underline;
+        }
+
+        .pdf-container {
+            width: 100%;
+            height: 600px; /* Height of the embedded PDF viewer */
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -134,8 +146,16 @@
         </div>
         <div class="content-box-text">
             <p>
-                 For this project I aided in smoothing ultrasound data from a PhD student's research. The motivation for this project is that heart defects in newborns develop in embryonic stages. If the development of the heart in these stages can be studied using CFD and muscle strains simulations, more can be learned about these defects. This can be done by creating a 3D model of the developing heart beating to run the simulations with. Chick hearts are used because they develop somewhat like human hearts and you can see into the eggs to image them easily. Stacked ultrasounds are used to make a 3D model, and they are made at different time points over the period which the heart beats. This data creates a model with a lot of high frequency noise in the movement over time, and some artifacts of the discrete data in space. The data is smoothed over time using a Fourier transform, which approximates a function using superposition of sine and cos waves. Then, the high noise frequencies are removed from the function. I did this using Matlab Fast Fourier Transform (fft). Finally, the smoothed version is converted back to the original vtk file format using a Fortran file my advisor Professor Esmaily wrote for me. This smoothed model can be used in simulations for more accurate results. Thanks to Gening Dong the PhD student I worked with for providing the data and Professor Esmaily for recommending the use of Matlab fft and helping with the code. 
+                For this project I aided in smoothing ultrasound data from a PhD student's research. The motivation for this project is that heart defects in newborns develop in embryonic stages. If the development of the heart in these stages can be studied using CFD and muscle strains simulations, more can be learned about these defects. This can be done by creating a 3D model of the developing heart beating to run the simulations with. Chick hearts are used because they develop somewhat like human hearts and you can see into the eggs to image them easily. Stacked ultrasounds are used to make a 3D model, and they are made at different time points over the period which the heart beats. This data creates a model with a lot of high frequency noise in the movement over time, and some artifacts of the discrete data in space. The data is smoothed over time using a Fourier transform, which approximates a function using superposition of sine and cos waves. Then, the high noise frequencies are removed from the function. I did this using Matlab Fast Fourier Transform (fft). Finally, the smoothed version is converted back to the original vtk file format using a Fortran file my advisor Professor Esmaily wrote for me. This smoothed model can be used in simulations for more accurate results. Thanks to Gening Dong the PhD student I worked with for providing the data and Professor Esmaily for recommending the use of Matlab fft and helping with the code.
             </p>
+        </div>
+
+        <!-- New header for the report -->
+        <h3>Check out the Final Report:</h3>
+
+        <!-- PDF viewer -->
+        <div class="pdf-container">
+            <iframe src="Drumm_Molly_MEng 2024_Final_Report.pdf" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
 
