@@ -214,13 +214,15 @@
             <img src="pixil-frame-0.png" alt="Image Description" width="32">
         </div>
         <nav>
-            <a href="/" id="about-link"><span class="underline">about</span></a>
+            <a href="#about-section" class="nav-link" id="about-link">about</a>
             <a href="#projects-section" class="nav-link" id="projects-link">projects</a>
-            <a href="/resume">resume</a>
+            <a href="#experience-section" class="nav-link" id="experience-link">experience</a>
+            <a href="#education-section" class="nav-link" id="education-link">education</a>
+            <a href="#resume-section" class="nav-link" id="resume-link">resume</a>
         </nav>
     </header>
 
-    <div class="content-box">
+    <div id= "about-section" class="content-box">
         <img src="headshot2.png" alt="Image Description" width="300">
         <div class="content-box-text">
             <p>
@@ -285,10 +287,6 @@
     </a>
 
     <script>
-        // Scroll to top on reload
-        window.onbeforeunload = function () {
-            window.scrollTo(0, 0);
-        };
         
         
         // Scroll behavior and active link handling
@@ -297,6 +295,7 @@
             var aboutLink = document.getElementById('about-link');
             var projectsLink = document.getElementById('projects-link');
             var projectsSection = document.getElementById('projects-section');
+            var aboutSection = document.getElementById('about-section');
             var fromTop = window.scrollY;
         
             // Offset for the header height
