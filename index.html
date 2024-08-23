@@ -216,9 +216,9 @@
             <img src="pixil-frame-0.png" alt="Image Description" width="32">
         </div>
         <nav>
-            <a href="http://mollydrumm.com"><span class="underline">about</span></a>
+            <a href="http://mollydrumm.com" id="about-link"><span class="underline">about</span></a>
             <a href="#projects-section" class="nav-link">projects</a>
-            <a href="http://mollydrumm.com/resume"">resume</a>
+            <a href="http://mollydrumm.com/resume">resume</a>
         </nav>
     </header>
 
@@ -277,6 +277,11 @@
     </a>
 
     <script>
+        // Scroll to the top when the page is reloaded
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        };
+
         window.addEventListener('scroll', function() {
             var navLinks = document.querySelectorAll('.nav-link');
             var projectsSection = document.getElementById('projects-section');
@@ -284,7 +289,7 @@
 
             navLinks.forEach(function(link) {
                 if (link.getAttribute('href') === '#projects-section') {
-                    var sectionTop = projectsSection.offsetTop - 100;
+                    var sectionTop = projectsSection.offsetTop - 100; // Adjust offset as needed
                     var sectionBottom = sectionTop + projectsSection.offsetHeight;
                     if (fromTop >= sectionTop && fromTop <= sectionBottom) {
                         link.classList.add('active');
@@ -295,6 +300,9 @@
                     link.classList.remove('active');
                 }
             });
+
+            // Remove active class from 'about' link to ensure only one active link
+            document.getElementById('about-link').classList.remove('active');
         });
     </script>
 </body>
