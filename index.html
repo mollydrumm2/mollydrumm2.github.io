@@ -290,24 +290,27 @@
             window.scrollTo(0, 0);
         };
         
+        
         // Scroll behavior and active link handling
         window.addEventListener('scroll', function() {
             var navLinks = document.querySelectorAll('.nav-link');
+            var aboutLink = document.getElementById('about-link');
+            var projectsLink = document.getElementById('projects-link');
             var projectsSection = document.getElementById('projects-section');
             var fromTop = window.scrollY;
         
             // Offset for the header height
             var offset = 150;
         
-            // Calculate the top and bottom of the projects section
+            // Calculate the top of the projects section
             var sectionTop = projectsSection.offsetTop - offset;
-            var sectionBottom = sectionTop + projectsSection.offsetHeight;
         
             navLinks.forEach(function(link) {
                 if (link.getAttribute('href') === '#projects-section') {
-                    // Adjust the condition to highlight "projects" when scrolling beyond its bottom as well
+                    // Highlight "projects" when scrolling past its top
                     if (fromTop >= sectionTop) {
                         link.classList.add('active');
+                        aboutLink.classList.remove('active');
                     } else {
                         link.classList.remove('active');
                     }
@@ -315,14 +318,15 @@
                     link.classList.remove('active');
                 }
             });
-        
-            // Ensure 'about' is not highlighted when in projects section or further
-            if (fromTop < sectionTop) {
-                document.getElementById('about-link').classList.add('active');
-            } else {
-                document.getElementById('about-link').classList.remove('active');
-            }
-        });
+
+    // Ensure 'about' is highlighted only when above the projects section
+    if (fromTop < sectionTop) {
+        aboutLink.classList.add('active');
+    } else {
+        aboutLink.classList.remove('active');
+    }
+});
+
         
         // Smooth scroll to the projects section with offset
         document.getElementById('projects-link').addEventListener('click', function(event) {
