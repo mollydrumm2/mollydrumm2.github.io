@@ -298,6 +298,8 @@
         
                 // Offset for the header height
                 var offset = 150;
+
+                var sectionTop = projectsSection.offsetTop - offset;
         
         
                 navLinks.forEach(function(link) {
@@ -326,7 +328,7 @@
             document.getElementById('projects-link').addEventListener('click', function(event) {
                 event.preventDefault();
                 var projectsSection = document.getElementById('projects-section');
-                var offset = 150;
+                var offset = 100;
                 var scrollToPosition = projectsSection.offsetTop - offset; // No offset
         
                 window.scrollTo({
