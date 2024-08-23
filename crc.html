@@ -27,39 +27,38 @@
 
         h1, nav a {
             font-size: 30px;
-            margin: 0; /* Remove default margin */
+            margin: 0;
         }
 
         nav a {
             color: #ECDFC3;
             text-decoration: none;
             margin: 0 5px;
-            transition: background-color 0.3s, color 0.3s; /* Add transition for color change */
-            padding: 10px 14px; /* Padding added for better spacing */
+            transition: background-color 0.3s, color 0.3s;
+            padding: 10px 14px;
         }
 
         nav a:hover {
             background-color: #6A3328;
-            color: #ECDFC3; /* Set text color on hover */
-            padding: 10px 14px; /* Adjusted padding for 14 by 20 pixels box */
+            color: #ECDFC3;
         }
 
         .underline {
             text-decoration: none;
             font-family: 'Trebuchet MS', sans-serif;
             font-size: 30px;
-            color: #ECDFC3; /* Set text color for underlined text */
+            color: #ECDFC3;
             background-color: #6A3328;
-            padding: 10px 14px; /* Adjusted padding for 14 by 20 pixels box */
+            padding: 10px 14px;
         }
 
         .header-content {
             display: flex;
-            align-items: center; /* Center items vertically */
+            align-items: center;
         }
 
         .header-content h1 {
-            margin-right: 10px; /* Add margin between h1 and img */
+            margin-right: 10px;
         }
 
         .content-box {
@@ -69,7 +68,7 @@
             padding: 20px;
             margin: 20px auto;
             width: 66.666%;
-            position: relative; /* Set position to relative for absolute positioning of logos */
+            position: relative;
         }
 
         .content-box h2 {
@@ -85,26 +84,27 @@
         }
 
         .content-box-images img {
-            border-radius: 30px; /* Rounded corners for the images */
-            width: 30%; /* Set each image to take up 30% of the width */
+            border-radius: 30px;
+            width: 30%;
         }
 
         .content-box-text {
             text-align: justify;
             font-size: 20px;
             color: #6A3328;
+            margin-bottom: 30px; /* Added margin for spacing between paragraph and social media logos */
         }
 
         /* Social media logos */
         .social-logos {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
+            position: relative; /* Changed to relative to avoid overlap with content */
+            margin-top: 20px; /* Added margin to create space from the paragraph */
             display: flex;
+            justify-content: flex-end; /* Align to the right */
         }
 
         .social-logos a {
-            margin-right: 10px;
+            margin-left: 10px; /* Adjust spacing between logos */
         }
 
         .social-logos img {
@@ -154,6 +154,7 @@
             width: 100%;
             height: 600px;
             border: none;
+            background-color: white; /* Ensures iframe content background remains white */
             margin-top: 20px;
         }
 
