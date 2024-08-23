@@ -302,12 +302,13 @@
             var offset = 150;
         
             // Calculate the top of the projects section
-            var sectionTop = projectsSection.offsetTop - offset;
+            var projectsectionTop = projectsSection.offsetTop - offset;
+            var aboutsectionTop = aboutSection.offsetTop - offset;
         
             navLinks.forEach(function(link) {
                 if (link.getAttribute('href') === '#projects-section') {
                     // Highlight "projects" when scrolling past its top
-                    if (fromTop >= sectionTop) {
+                    if (fromTop >= projectsectionTop) {
                         link.classList.add('active');
                         aboutLink.classList.remove('active');
                     } else {
