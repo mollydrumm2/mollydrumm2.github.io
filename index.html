@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Molly Drumm</title>
 
-    <!-- Just wanna say somewhere that chat gpt wrote basically all of this lol I don't know html -->
-
     <link rel="icon" type="image/png" href="pixilart-drawing (3).png">
 
     <style>
@@ -217,7 +215,7 @@
         </div>
         <nav>
             <a href="/" id="about-link"><span class="underline">about</span></a>
-            <a href="#projects-section" class="nav-link">projects</a>
+            <a href="#projects-section" class="nav-link" id="projects-link">projects</a>
             <a href="/resume">resume</a>
         </nav>
     </header>
@@ -313,6 +311,19 @@
             } else {
                 document.getElementById('about-link').classList.remove('active');
             }
+        });
+
+        // Smooth scroll to the projects section with offset
+        document.getElementById('projects-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            var projectsSection = document.getElementById('projects-section');
+            var offset = 150; // Adjust this value if needed
+            var scrollToPosition = projectsSection.offsetTop - offset;
+
+            window.scrollTo({
+                top: scrollToPosition,
+                behavior: 'smooth'
+            });
         });
     </script>
 </body>
