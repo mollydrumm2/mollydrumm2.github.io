@@ -111,11 +111,17 @@
             margin-left: 20px;
         }
 
-        /* Center the image */
-        .content-box img {
-            display: block;
-            margin: 20px auto;
-            max-width: 100%;
+        /* Center the images side by side */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* Add some space between the images */
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            width: 300px; /* Adjust the width as needed */
             height: auto;
         }
 
@@ -152,11 +158,12 @@
         Bloodsport Battlebots CFD Simulation
     </div>
 
-        <div class="content-box">
-
-        
-        <img src="bloodsport.jpeg" alt="bloodsport" width="400">
-      
+    <div class="content-box">
+        <!-- Images side by side -->
+        <div class="image-container">
+            <img src="bloodsport.jpeg" alt="Bloodsport Image">
+            <img src="pressure_contours.png" alt="Pressure Contours Image">
+        </div>
 
         <div class="content-box-text">
             <p>
@@ -164,14 +171,13 @@
             </p>
         </div>
 
-
         <div class="arrow-container">
             <img src="CFD_old.jpg" alt="Image 1" width="350">
             <img src="arrow-right.png" alt="Arrow Right" width="50">
             <img src="CFD_new.jpg" alt="Image 2" width="350">
         </div>
     </div>
-    
+
     <!-- Add more content boxes here -->
 
 </body>
