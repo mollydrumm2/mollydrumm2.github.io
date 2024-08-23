@@ -279,23 +279,24 @@
         window.onbeforeunload = function () {
             window.scrollTo(0, 0);
         };
-
+        
         // Scroll behavior and active link handling
         window.addEventListener('scroll', function() {
             var navLinks = document.querySelectorAll('.nav-link');
             var projectsSection = document.getElementById('projects-section');
             var fromTop = window.scrollY;
-
+        
             // Offset for the header height
             var offset = 150;
-
+        
             // Calculate the top and bottom of the projects section
             var sectionTop = projectsSection.offsetTop - offset;
             var sectionBottom = sectionTop + projectsSection.offsetHeight;
-
+        
             navLinks.forEach(function(link) {
                 if (link.getAttribute('href') === '#projects-section') {
-                    if (fromTop >= sectionTop && fromTop <= sectionBottom) {
+                    // Adjust the condition to highlight "projects" when scrolling beyond its bottom as well
+                    if (fromTop >= sectionTop) {
                         link.classList.add('active');
                     } else {
                         link.classList.remove('active');
@@ -304,27 +305,28 @@
                     link.classList.remove('active');
                 }
             });
-
-            // Ensure 'about' is not highlighted when in projects section
+        
+            // Ensure 'about' is not highlighted when in projects section or further
             if (fromTop < sectionTop) {
                 document.getElementById('about-link').classList.add('active');
             } else {
                 document.getElementById('about-link').classList.remove('active');
             }
         });
-
+        
         // Smooth scroll to the projects section with offset
         document.getElementById('projects-link').addEventListener('click', function(event) {
             event.preventDefault();
             var projectsSection = document.getElementById('projects-section');
             var offset = 100; // Adjust this value if needed
             var scrollToPosition = projectsSection.offsetTop - offset;
-
+        
             window.scrollTo({
                 top: scrollToPosition,
                 behavior: 'smooth'
             });
         });
+
     </script>
 </body>
 </html>
