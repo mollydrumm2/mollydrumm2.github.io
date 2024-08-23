@@ -45,6 +45,7 @@
             transition: background-color 0.3s, color 0.3s; /* Add transition for color change */
             padding: 10px 14px; /* Padding added for better spacing */
         }
+        
 
         nav a:hover {
             background-color: #6A3328;
@@ -203,6 +204,10 @@
             font-size: 15px; /* Set font size for the paragraph text */
             color: #ECDFC3; /* Set text color to #6A3328 */
         }
+        
+        html {
+            scroll-behavior: smooth;
+        }
 
     </style>
 </head>
@@ -214,7 +219,7 @@
         </div>
         <nav>
             <a href="http://mollydrumm.com"><span class="underline">about</span></a>
-            <a href="http://mollydrumm.com/projects">projects</a>
+            <a href="projects-section">projects</a>
             <a href="http://mollydrumm.com/resume"">resume</a>
         </nav>
     </header>
@@ -240,7 +245,7 @@
         </div>
     </div>
 
-    <div class="projects-box">
+    <div id="projects-section" class="projects-box">
         <h2>Projects</h2>
             <p>
                 click to learn more!
