@@ -18,6 +18,39 @@
             color: #ECDFC3;
             background-size: 100% 200vh; /* Adjust height so the gradient covers more space */
             background-attachment: scroll; /* Ensures the background scrolls with the content */
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const sections = document.querySelectorAll("section");
+                    const navLinks = document.querySelectorAll(".nav-link");
+            
+                    window.addEventListener("scroll", function() {
+                        let current = "";
+            
+                        sections.forEach(section => {
+                            const sectionTop = section.offsetTop;
+                            const sectionHeight = section.clientHeight;
+                            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                                current = section.getAttribute("id");
+                            }
+                        });
+            
+                        navLinks.forEach(link => {
+                            link.classList.remove("active");
+                            if (link.getAttribute("href").substring(1) === current) {
+                                link.classList.add("active");
+                            }
+                        });
+                    });
+            
+                    navLinks.forEach(link => {
+                        link.addEventListener("click", function() {
+                            navLinks.forEach(link => link.classList.remove("active"));
+                            this.classList.add("active");
+                        });
+                    });
+                });
+            </script>
+
         }
 
         header {
@@ -55,6 +88,11 @@
         
         nav a:last-child {
     margin-right: 40px; /* Add margin to the right side of the last navigation link */
+        }
+
+        .nav-link.active {
+            background-color: #6A3328;
+            color: #ECDFC3;
         }
 
         .underline {
@@ -219,7 +257,7 @@
         </div>
         <nav>
             <a href="http://mollydrumm.com"><span class="underline">about</span></a>
-            <a href="projects-section">projects</a>
+            <a href="projects-section" class="nav-link">projects</a>
             <a href="http://mollydrumm.com/resume"">resume</a>
         </nav>
     </header>
