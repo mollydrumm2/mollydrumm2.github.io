@@ -287,59 +287,69 @@
     </a>
 
     <script>
+            // Scroll behavior and active link handling
+            window.addEventListener('scroll', function() {
+                var navLinks = document.querySelectorAll('.nav-link');
+                var aboutLink = document.getElementById('about-link');
+                var projectsLink = document.getElementById('projects-link');
+                var projectsSection = document.getElementById('projects-section');
+                var aboutSection = document.getElementById('about-section');
+                var fromTop = window.scrollY;
         
+                // Offset for the header height
+                var offset = 150;
         
-        // Scroll behavior and active link handling
-        window.addEventListener('scroll', function() {
-            var navLinks = document.querySelectorAll('.nav-link');
-            var aboutLink = document.getElementById('about-link');
-            var projectsLink = document.getElementById('projects-link');
-            var projectsSection = document.getElementById('projects-section');
-            var aboutSection = document.getElementById('about-section');
-            var fromTop = window.scrollY;
+                // Calculate the top of the projects section
+                var sectionTop = projectsSection.offsetTop - offset;
         
-            // Offset for the header height
-            var offset = 150;
-        
-            // Calculate the top of the projects section
-            var sectionTop = projectsSection.offsetTop - offset;
-        
-            navLinks.forEach(function(link) {
-                if (link.getAttribute('href') === '#projects-section') {
-                    // Highlight "projects" when scrolling past its top
-                    if (fromTop >= sectionTop) {
-                        link.classList.add('active');
-                        aboutLink.classList.remove('active');
+                navLinks.forEach(function(link) {
+                    if (link.getAttribute('href') === '#projects-section') {
+                        // Highlight "projects" when scrolling past its top
+                        if (fromTop >= sectionTop) {
+                            link.classList.add('active');
+                            aboutLink.classList.remove('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
                     } else {
                         link.classList.remove('active');
                     }
+                });
+        
+                // Ensure 'about' is highlighted only when above the projects section
+                if (fromTop < sectionTop) {
+                    aboutLink.classList.add('active');
                 } else {
-                    link.classList.remove('active');
+                    aboutLink.classList.remove('active');
                 }
             });
-
-    // Ensure 'about' is highlighted only when above the projects section
-    if (fromTop < sectionTop) {
-        aboutLink.classList.add('active');
-    } else {
-        aboutLink.classList.remove('active');
-    }
-});
-
         
-        // Smooth scroll to the projects section with offset
-        document.getElementById('projects-link').addEventListener('click', function(event) {
-            event.preventDefault();
-            var projectsSection = document.getElementById('projects-section');
-            var offset = 100; // Adjust this value if needed
-            var scrollToPosition = projectsSection.offsetTop - offset;
+            // Smooth scroll to the projects section with offset
+            document.getElementById('projects-link').addEventListener('click', function(event) {
+                event.preventDefault();
+                var projectsSection = document.getElementById('projects-section');
+                var offset = 150; // Adjust this value if needed
+                var scrollToPosition = projectsSection.offsetTop - offset;
         
-            window.scrollTo({
-                top: scrollToPosition,
-                behavior: 'smooth'
+                window.scrollTo({
+                    top: scrollToPosition,
+                    behavior: 'smooth'
+                });
             });
-        });
-
+        
+            // Smooth scroll to the about section with offset
+            document.getElementById('about-link').addEventListener('click', function(event) {
+                event.preventDefault();
+                var aboutSection = document.getElementById('about-section');
+                var offset = 150; // Adjust this value if needed
+                var scrollToPosition = aboutSection.offsetTop - offset;
+        
+                window.scrollTo({
+                    top: scrollToPosition,
+                    behavior: 'smooth'
+                });
+            });
     </script>
+
 </body>
 </html>
