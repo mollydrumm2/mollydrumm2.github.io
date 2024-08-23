@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -216,9 +216,9 @@
             <img src="pixil-frame-0.png" alt="Image Description" width="32">
         </div>
         <nav>
-            <a href="http://mollydrumm.com" id="about-link"><span class="underline">about</span></a>
+            <a href="/" id="about-link"><span class="underline">about</span></a>
             <a href="#projects-section" class="nav-link">projects</a>
-            <a href="http://mollydrumm.com/resume">resume</a>
+            <a href="/resume">resume</a>
         </nav>
     </header>
 
@@ -246,7 +246,7 @@
         <p>click to learn more!</p>
     </div>
 
-    <a href="http://mollydrumm.com/meng_proj" class="content-box-2">
+    <a href="/meng_proj" class="content-box-2">
         <img src="smoothed_front_REAL.gif" alt="meng proj gif" width="200">
         <div class="content-box-2-text">
             <h2>Masters of Engineering Project</h2>
@@ -256,7 +256,7 @@
         </div>
     </a>
 
-    <a href="http://mollydrumm.com/bloodsport" class="content-box-2">
+    <a href="/bloodsport" class="content-box-2">
         <img src="CFD_new.jpg" alt="bloodsport image" width="200">
         <div class="content-box-2-text">
             <h2>Bloodsport Battlebot CFD sims</h2>
@@ -266,7 +266,7 @@
         </div>
     </a>
 
-    <a href="http://mollydrumm.com/crc" class="content-box-2">
+    <a href="/crc" class="content-box-2">
         <img src="florence.jpeg" alt="crc image" width="200">
         <div class="content-box-2-text">
             <h2>Combat Robotics @ Cornell</h2>
@@ -277,20 +277,26 @@
     </a>
 
     <script>
-        // Scroll to the top when the page is reloaded
+        // Scroll to top on reload
         window.onbeforeunload = function () {
             window.scrollTo(0, 0);
         };
 
+        // Scroll behavior and active link handling
         window.addEventListener('scroll', function() {
             var navLinks = document.querySelectorAll('.nav-link');
             var projectsSection = document.getElementById('projects-section');
             var fromTop = window.scrollY;
 
+            // Offset for the header height
+            var offset = 150;
+
+            // Calculate the top and bottom of the projects section
+            var sectionTop = projectsSection.offsetTop - offset;
+            var sectionBottom = sectionTop + projectsSection.offsetHeight;
+
             navLinks.forEach(function(link) {
                 if (link.getAttribute('href') === '#projects-section') {
-                    var sectionTop = projectsSection.offsetTop - 100; // Adjust offset as needed
-                    var sectionBottom = sectionTop + projectsSection.offsetHeight;
                     if (fromTop >= sectionTop && fromTop <= sectionBottom) {
                         link.classList.add('active');
                     } else {
@@ -301,8 +307,12 @@
                 }
             });
 
-            // Remove active class from 'about' link to ensure only one active link
-            document.getElementById('about-link').classList.remove('active');
+            // Ensure 'about' is not highlighted when in projects section
+            if (fromTop < sectionTop) {
+                document.getElementById('about-link').classList.add('active');
+            } else {
+                document.getElementById('about-link').classList.remove('active');
+            }
         });
     </script>
 </body>
