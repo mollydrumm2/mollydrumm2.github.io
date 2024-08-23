@@ -300,7 +300,7 @@
                 var offset = 150;
         
                 // Calculate the top of the projects section
-                var sectionTop = projectsSection.offsetTop - offset;
+                var sectionTop = projectsSection.offsetTop;
         
                 navLinks.forEach(function(link) {
                     if (link.getAttribute('href') === '#projects-section') {
@@ -324,12 +324,11 @@
                 }
             });
         
-            // Smooth scroll to the projects section with offset
+            // Smooth scroll to the projects section without offset
             document.getElementById('projects-link').addEventListener('click', function(event) {
                 event.preventDefault();
                 var projectsSection = document.getElementById('projects-section');
-                var offset = 150; // Adjust this value if needed
-                var scrollToPosition = projectsSection.offsetTop - offset;
+                var scrollToPosition = projectsSection.offsetTop; // No offset
         
                 window.scrollTo({
                     top: scrollToPosition,
@@ -350,6 +349,7 @@
                 });
             });
     </script>
+
 
 </body>
 </html>
