@@ -11,7 +11,7 @@
         body {
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #8E4536 0%, #8E4536 25%, #371b15 45%);
+            background: linear-gradient(to bottom, #8E4536 0%, #8E4536 25%, #371b15 45%, #e63900 75%);
             font-family: 'Trebuchet MS', sans-serif;
             color: #ECDFC3;
             background-size: 100% 200vh;
@@ -205,6 +205,24 @@
         html {
             scroll-behavior: smooth;
         }
+
+        .experience-box {
+            background-color: #371b15;
+            border-radius: 30px;
+            padding: 10px 20px;
+            margin: 20px auto;
+            display: inline-block;
+            text-align: center;
+            position: relative;
+            left: calc(16.666%);
+        }
+
+        .experience-box h2 {
+            font-size: 36px;
+            color: #ECDFC3;
+            margin: 0;
+        }
+        
     </style>
 </head>
 <body>
@@ -286,13 +304,19 @@
         </div>
     </a>
 
+    <div id="experience-section" class="experience-box">
+        <h2>Experience</h2>
+    </div>
+
     <script>
             window.addEventListener('scroll', function() {
                 var navLinks = document.querySelectorAll('.nav-link');
                 var aboutLink = document.getElementById('about-link');
                 var projectsLink = document.getElementById('projects-link');
+                var projectsLink = document.getElementById('experience-link');
                 var projectsSection = document.getElementById('projects-section');
                 var aboutSection = document.getElementById('about-section');
+                var aboutSection = document.getElementById('experience-section');
                 var fromTop = window.scrollY;
             
                 // Offset for the header height
