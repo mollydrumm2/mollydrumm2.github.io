@@ -538,13 +538,7 @@
             document.addEventListener('DOMContentLoaded', function () {
                 const sections = document.querySelectorAll('section');
                 const navLinks = document.querySelectorAll('.nav-link');
-                const headerOffset = 150; // General offset for the header height
-                const sectionSpecificOffsets = {
-                    projects: 100,   // Custom offset for the Projects section
-                    experience: 100, // Custom offset for the Experience section
-                    education: 100,  // Custom offset for the Education section
-                    resume: 100,     // Custom offset for the Resume section
-                };
+                const offset = 100; // Offset for the header height
         
                 // Set the "about" link as active when the page loads
                 const aboutLink = document.getElementById('about-link');
@@ -555,13 +549,7 @@
                     link.addEventListener('click', function (e) {
                         e.preventDefault();
                         const targetSection = document.querySelector(this.getAttribute('href'));
-                        let scrollToPosition = targetSection.offsetTop - headerOffset;
-        
-                        // Apply specific offsets for certain sections if defined
-                        const sectionId = targetSection.id;
-                        if (sectionSpecificOffsets[sectionId]) {
-                            scrollToPosition = targetSection.offsetTop - sectionSpecificOffsets[sectionId];
-                        }
+                        const scrollToPosition = targetSection.offsetTop - offset;
         
                         window.scrollTo({
                             top: scrollToPosition,
@@ -572,7 +560,7 @@
         
                 // Add scroll event listener to highlight current section link
                 window.addEventListener('scroll', function () {
-                    let fromTop = window.scrollY + headerOffset; // Adjust scroll position to account for the header
+                    let fromTop = window.scrollY + offset; // Adjust scroll position to account for the header
         
                     sections.forEach(section => {
                         if (
@@ -603,6 +591,7 @@
                 });
             });
     </script>
+
 
 
 
