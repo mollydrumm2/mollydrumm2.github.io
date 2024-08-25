@@ -8,10 +8,23 @@
     <link rel="icon" type="image/png" href="pixilart-drawing (3).png">
 
     <style>
+
         body {
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #8E4536 0%, #371b15 25%, #ff9966 50%, #ffb380 75%, #ffd9b3 100%);
+            background: linear-gradient(
+                to bottom,
+                #8E4536 0%,   /* First color for about section */
+                #8E4536 25%,  /* End first color */
+                #371b15 25%,  /* Start second color for projects section */
+                #371b15 50%,  /* End second color */
+                #ff9966 50%,  /* Start third color for experience section */
+                #ff9966 75%,  /* End third color */
+                #ffb380 75%,  /* Start fourth color for education section */
+                #ffb380 90%,  /* End fourth color */
+                #ffd9b3 90%,  /* Start fifth color for resume section */
+                #ffd9b3 100%  /* End fifth color */
+            );
             font-family: 'Trebuchet MS', sans-serif;
             color: #ECDFC3;
             background-size: 100% 200vh;
