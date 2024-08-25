@@ -346,6 +346,12 @@
             color: #ECDFC3;
             margin: 0;
         }
+
+        .nav-link.hovered {
+            background-color: #6A3328;
+            color: #ECDFC3;
+        }
+
         
     </style>
 </head>
@@ -364,7 +370,8 @@
         </nav>
     </header>
 
-    <div id= "about-section" class="content-box">
+    <section id="about-section">
+    <div class="content-box">
         <img src="headshot2.png" alt="Image Description" width="300">
         <div class="content-box-text">
             <p>
@@ -383,7 +390,10 @@
         </div>
     </div>
 
-    <div id="projects-section" class="projects-box">
+    </section>
+
+    <section id="projects-section">
+    <div class="projects-box">
         <h2>Projects</h2>
         <p>(click on each box to learn more!)</p>
     </div>
@@ -428,7 +438,10 @@
         </div>
     </a>
 
-    <div id="experience-section" class="experience-box">
+    </section>
+
+    <section id="experience-section">
+    <div class="experience-box">
         <h2>Experience</h2>
     </div>
 
@@ -481,7 +494,11 @@
         </div>
     </a>
 
-    <div id="education-section" class="education-box">
+    </section>
+
+    <section id="education-section">
+
+    <div class="education-box">
         <h2>Education</h2>
     </div>
 
@@ -505,75 +522,72 @@
         </div>
     </a>
 
-    <div id="resume-section" class="resume-box">
+    </section>
+
+    <section id="resume-section">
+
+    <div class="resume-box">
         <h2>Resume</h2>
-    </div>    
+    </div>   
+
+    </section>
 
     
 
     <script>
-            window.addEventListener('scroll', function() {
-                var navLinks = document.querySelectorAll('.nav-link');
-                var aboutLink = document.getElementById('about-link');
-                var projectsLink = document.getElementById('projects-link');
-                var aboutLink = document.getElementById('experience-link');
-                var projectsLink = document.getElementById('education-link');
-                var projectsSection = document.getElementById('projects-section');
-                var aboutSection = document.getElementById('about-section');
-                var projectsSection = document.getElementById('experience-section');
-                var aboutSection = document.getElementById('education-section');
-                var fromTop = window.scrollY;
-            
-                // Offset for the header height
-                var offset = 150;
+            document.addEventListener('DOMContentLoaded', function () {
+                const sections = document.querySelectorAll('section');
+                const navLinks = document.querySelectorAll('.nav-link');
+                const offset = 150; // Offset for the header height
         
-                var sectionTop = projectsSection.offsetTop - offset;
-            
-                // Remove active class from all links
-                navLinks.forEach(function(link) {
-                    link.classList.remove('active');
+                // Smooth scroll to section
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const targetSection = document.querySelector(this.getAttribute('href'));
+                        const scrollToPosition = targetSection.offsetTop - offset;
+        
+                        window.scrollTo({
+                            top: scrollToPosition,
+                            behavior: 'smooth'
+                        });
+                    });
                 });
-            
-                // Highlight the about link only if before the projects section
-                if (fromTop < sectionTop) {
-                    aboutLink.classList.add('active');
-                } else {
-                    projectsLink.classList.add('active');
-                }
-            });
         
-            // Highlight the 'about' link on page load
-            window.addEventListener('DOMContentLoaded', function() {
-                var aboutLink = document.getElementById('about-link');
-                aboutLink.classList.add('active');
-            });
+                // Add scroll event listener to highlight current section link
+                window.addEventListener('scroll', function () {
+                    let fromTop = window.scrollY + offset; // Adjust scroll position to account for the header
         
-            // Smooth scroll to the projects section without offset
-            document.getElementById('projects-link').addEventListener('click', function(event) {
-                event.preventDefault();
-                var projectsSection = document.getElementById('projects-section');
-                var offset = 100;
-                var scrollToPosition = projectsSection.offsetTop - offset;
+                    sections.forEach(section => {
+                        if (
+                            section.offsetTop <= fromTop &&
+                            section.offsetTop + section.offsetHeight > fromTop
+                        ) {
+                            const currentLink = document.querySelector(
+                                `.nav-link[href="#${section.id}"]`
+                            );
         
-                window.scrollTo({
-                    top: scrollToPosition,
-                    behavior: 'smooth'
+                            navLinks.forEach(link => link.classList.remove('active'));
+                            currentLink.classList.add('active');
+                        }
+                    });
                 });
-            });
         
-            // Smooth scroll to the about section with offset
-            document.getElementById('about-link').addEventListener('click', function(event) {
-                event.preventDefault();
-                var aboutSection = document.getElementById('about-section');
-                var offset = 150; // Adjust this value if needed
-                var scrollToPosition = aboutSection.offsetTop - offset;
+                // Add hover effect for nav links (this is controlled by CSS, but can be customized here if needed)
+                navLinks.forEach(link => {
+                    link.addEventListener('mouseover', function () {
+                        if (!this.classList.contains('active')) {
+                            this.classList.add('hovered');
+                        }
+                    });
         
-                window.scrollTo({
-                    top: scrollToPosition,
-                    behavior: 'smooth'
+                    link.addEventListener('mouseout', function () {
+                        this.classList.remove('hovered');
+                    });
                 });
             });
     </script>
+
 
 
 
