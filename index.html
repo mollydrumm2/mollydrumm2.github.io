@@ -12,23 +12,8 @@
         body {
             margin: 0;
             padding: 0;
-            background: linear-gradient(
-                to bottom,
-                #8E4536 0%,   /* First color for about section */
-                #8E4536 50%,  /* End first color */
-                #371b15 50%,  /* Start second color for projects section */
-                #371b15 100%,  /* End second color */
-                #ff9966 100%,  /* Start third color for experience section */
-                #ff9966 150%,  /* End third color */
-                #ffb380 150%,  /* Start fourth color for education section */
-                #ffb380 180%,  /* End fourth color */
-                #ffd9b3 180%,  /* Start fifth color for resume section */
-                #ffd9b3 200%  /* End fifth color */
-            );
             font-family: 'Trebuchet MS', sans-serif;
             color: #ECDFC3;
-            background-size: 100% 200vh;
-            background-attachment: scroll;
         }
 
         header {
@@ -87,6 +72,32 @@
 
         .header-content h1 {
             margin-right: 10px;
+        }
+
+        section {
+            padding-top: 150px;
+            padding-bottom: 100px;
+            width: 100%;
+        }
+
+        #about-section {
+            background-color: #8e4536;
+        }
+
+        #projects-section {
+            background-color: #371b15;
+        }
+
+        #experience-section {
+            background-color: #ff9966;
+        }
+
+        #education-section {
+            background-color: #ffb380;
+        }
+
+        #resume-section {
+            background-color: #ffd9b3;
         }
 
         .content-box {
