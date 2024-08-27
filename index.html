@@ -104,6 +104,12 @@
             width: 100%;
         }
 
+                /* Add this CSS to account for the fixed header */
+        .section-offset {
+            padding-top: 70px; /* Equal to the height of your fixed header */
+            margin-top: -70px; /* Shift the section up to counteract the padding */
+        }
+
         #about-section {
             background-color: #8e4536;
         }
@@ -420,7 +426,7 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            align-items: center;
+            align-items: left;
         }
             
             .content-box-resume-text h2 {
@@ -457,7 +463,7 @@
         </nav>
     </header>
 
-    <section id="about-section">
+    <section id="about-section" class="section-offset">
     <div class="content-box">
         <img src="headshot2.png" alt="Image Description" width="300">
         <div class="content-box-text">
@@ -479,7 +485,7 @@
 
     </section>
 
-    <section id="projects-section">
+    <section id="projects-section" class="section-offset">
     <div class="projects-box">
         <h2>Projects</h2>
         <p>(click on each box to learn more!)</p>
@@ -527,7 +533,7 @@
  -->
     </section>
 
-    <section id="experience-section">
+    <section id="experience-section" class="section-offset">
     <div class="experience-box">
         <h2>Experience</h2>
     </div>
@@ -583,7 +589,7 @@
 
     </section>
 
-    <section id="education-section">
+    <section id="education-section" class="section-offset">
 
     <div class="education-box">
         <h2>Education</h2>
@@ -611,7 +617,7 @@
 
     </section>
 
-    <section id="resume-section">
+    <section id="resume-section" class="section-offset">
 
     <div class="resume-box">
         <h2>Resume</h2>
@@ -620,7 +626,7 @@
            
     <div class="content-box-resume">
         <div class="content-box-resume-text">
-            <h2>Download My Resume</h2>
+            <h2>Resume for download:</h2>
             <iframe src="resume.pdf" width="100%" height="600px"></iframe>
         </div>
     </div> 
