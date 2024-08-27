@@ -25,6 +25,18 @@
             padding: 20px;
         }
 
+        h1 {
+            font-size: 30px;
+            margin: 0;
+            user-select: none; /* Prevent text selection */
+        }
+        
+        /* Grow the text on hover */
+        h1:hover {
+            transform: scale(1.2); /* Increase the size by 20% */
+            transition: transform 0.3s ease-in-out; /* Smooth transition */
+        }
+
         h1, nav a {
             font-size: 30px;
             margin: 0;
