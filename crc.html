@@ -29,12 +29,26 @@
             font-size: 30px;
             margin: 0;
             user-select: none; /* Prevent text selection */
+            text-decoration: none; /* Remove any default underline */
+            background: none; /* Ensure no background highlight */
         }
         
         /* Grow the text on hover */
         h1:hover {
             transform: scale(1.2); /* Increase the size by 20% */
             transition: transform 0.3s ease-in-out; /* Smooth transition */
+        }
+        
+        /* Additional styling for the link inside the h1 to remove any link styles */
+        h1 a {
+            color: inherit; /* Make sure the link inherits the color */
+            text-decoration: none; /* Remove underline from the link */
+            background: none; /* Remove background highlight */
+        }
+        
+        h1 a:hover {
+            text-decoration: none; /* Prevent underline on hover */
+            background: none; /* Prevent background highlight on hover */
         }
 
         h1, nav a {
