@@ -106,8 +106,8 @@
 
                 /* Add this CSS to account for the fixed header */
         .section-offset {
-            padding-top: 70px; /* Equal to the height of your fixed header */
-            margin-top: -70px; /* Shift the section up to counteract the padding */
+            padding-top: 10px; /* Equal to the height of your fixed header */
+            margin-top: -10px; /* Shift the section up to counteract the padding */
         }
 
         #about-section {
@@ -639,7 +639,7 @@
             document.addEventListener('DOMContentLoaded', function () {
                 const sections = document.querySelectorAll('section');
                 const navLinks = document.querySelectorAll('.nav-link');
-                const offset = 70; // Offset for the header height
+                const offset = 0; // Offset for the header height
         
                 // Set the "about" link as active when the page loads
                 const aboutLink = document.getElementById('about-link');
